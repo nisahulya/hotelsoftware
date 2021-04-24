@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+    <style>
+        input {
+            background-color: #48a4e0;
+        }
+
+        .oda{
+            padding: 5px;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +48,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-6">
                 <br>
                 <br>
                 <h4 for="check-in">Enter Dates:</h4>
@@ -47,7 +60,6 @@
                 <form class="form-inline" action="/action_page.php">
                     <label for="check-out">Check-out:</label>
                     <input type="date" class="form-control" placeholder="Enter check-out" id="check-out">
-                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                 </form>
                 <br>
                 <br>
@@ -56,16 +68,38 @@
                     <form class="form-inline" action="/action_page.php">
                         <label for="numberofguests">Number of Guests:</label>
                         <input type="number" class="form-control" id="numberofguests">
-                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                     </form>
                 </div>
                 <br>
                 <br>
-                <div>
-                    <button type="search" class="btn btn-primary">Search</button>
-                </div>
+                <form>
+                    <input type="button" value="Search" onclick="msg()">
+                </form>
             </div>
-            <div class="col-sm">
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button class="oda">Oda1</button>
+                        <button class="oda"> Oda4</button>
+                        <button class="oda">Oda7</button>
+                    </div>
+                    <div class="col-sm-2"> 
+                        <button class="oda">Oda2</button>
+                        <button class="oda">Oda5</button>
+                        <button class="oda">Oda8</button>
+                    </div>
+                    <div class="col-sm-2"> 
+                        <button class="oda">Oda3</button>
+                        <button class="oda">Oda6</button>
+                        <button class="oda">Oda9</button>
+                    </div>
+
+                </div>
 
             </div>
         </div>
