@@ -2,33 +2,6 @@
 <html lang="en">
 
 <head>
-    <style>
-        #updatebutton {
-            margin: 5px;
-            margin-top: 40px;
-        }
-
-        #addbutton {
-            margin: 5px;
-            margin-top: 110px;
-        }
-
-        #comment {
-            margin-left: 75px;
-        }
-
-        #commentlabel {
-            margin-left: 75px;
-        }
-
-        #commenttext {
-            margin-left: 66px;
-        }
-
-        #oldreservation {
-            margin-left: 75px;
-        }
-    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,75 +34,44 @@
         </ul>
     </nav>
 
-    <form>
-        <br>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-            </div>
-            <div class="col">
-                <input type="tel" class="form-control" placeholder="Phone Number">
-            </div>
-            <form>
-                <input type="button" value="Search" onclick="msg()">
-            </form>
-        </div>
-    </form>
 
-    <br>
-    <br>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="input-group">
-                    
-                    <textarea id="" cols="70" rows="3"
-                        name="textareaAxs">29/07/2021 ve 03/08/2021 tarihleri arasında 3 no'lu odaya 2 kişilik rezervasyonunuz bulunmaktadır.</textarea>
-                    <div class="">
-                        <a style="color:white;" id="updatebutton" class="input-group-button btn btn btn-info btn-block"><i
-                                class="fa fa-thumbs-down"></i>Update</a>
-                    </div>
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <h4 for="check-in">Enter Dates:</h4>
+                <form class="form-inline" action="/action_page.php">
+                    <label for="check-in">Check-in:</label>
+                    <input type="date" class="form-control" placeholder="Enter check-in" id="check-in">
+                </form>
+                <br>
+                <form class="form-inline" action="/action_page.php">
+                    <label for="check-out">Check-out:</label>
+                    <input type="date" class="form-control" placeholder="Enter check-out" id="check-out">
+                </form>
+                <br>
+                <br>
+                <div>
+                    <h4 for="check-in">Enter Number of Person:</h4>
+                    <form class="form-inline" action="/action_page.php">
+                        <label for="numberofguests">Number of Person:</label>
+                        <input type="number" class="form-control" id="numberofguests">
+                    </form>
                 </div>
+                <br>
+                <br>
+                <form>
+                    <input type="button" value="Search" onclick="msg()">
+                </form>
             </div>
-        </div>
-    </div>
+            <div class="col-sm-6">
 
-    <br>
-    <br>
-    <br>
-    <div>
-        <p id="oldreservation">İnfo about old reservation details and comments</p>
-    </div>
-    <br>
-
-
-    <!-- <div>
- 
-        <label id="commentlabel" for="comment">Comment:</label>
-        <br>
-        <textarea name="" id="comment" cols="70" rows="5"></textarea>
-       
-        <button>Add</button>
-    </div> -->
-
-    <div>
-        <h4 id="commenttext">Comment:</h4>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="input-group">
-                    <br>
-                    <textarea id="commentadd" cols="70" rows="6"
-                        name="textareaAxs"></textarea>
-                    <div class=>
-                        <a style="color:white;" id="addbutton" class="input-group-button btn btn btn-info btn-block">Add</a>
-                    </div>
-                </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 
