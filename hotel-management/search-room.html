@@ -9,12 +9,16 @@
 
         .oda{
             padding: 5px;
-            margin-top: 10px;
+            margin-top: 20px;
             margin-left: 5px;
             margin-right: 5px;
+            border-color: white;
+            border-radius: 8px;
+            border-style: solid;
         }
+       
     </style>
-
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -72,8 +76,9 @@
                 </div>
                 <br>
                 <br>
+                <h1 id="h1"></h1>
                 <form>
-                    <input class="btn btn-info" type="button" value="Search" onclick="msg()">
+                    <input id="searchbutton"class="btn btn-info" type="button" value="Search" onclick="changeColor()">
                 </form>
             </div>
             <div class="col-sm-6">
@@ -84,19 +89,19 @@
 
                 <div class="row">
                     <div class="col-sm-2">
-                        <button class="oda">Oda1</button>
-                        <button class="oda"> Oda4</button>
-                        <button class="oda">Oda7</button>
+                        <button id="room1" class="oda">Room1</button>
+                        <button id="room4" class="oda"> Room4</button>
+                        <button id="room7" class="oda">Room7</button>
                     </div>
                     <div class="col-sm-2"> 
-                        <button class="oda">Oda2</button>
-                        <button class="oda">Oda5</button>
-                        <button class="oda">Oda8</button>
+                        <button id="room2" class="oda">Room2</button>
+                        <button id="room5" class="oda">Room5</button>
+                        <button id="room8" class="oda">Room8</button>
                     </div>
                     <div class="col-sm-2"> 
-                        <button class="oda">Oda3</button>
-                        <button class="oda">Oda6</button>
-                        <button class="oda">Oda9</button>
+                        <button id="room3" class="oda">Room3</button>
+                        <button id="room6" class="oda">Room6</button>
+                        <button id="room9" class="oda">Room9</button>
                     </div>
 
                 </div>
@@ -107,8 +112,8 @@
     </div>
 
 
-    <!-- Footer -->
-    <footer class="bottom bg-info">
+     <!-- Footer -->
+     <footer class="fixed-bottom bg-info">
         <div class="container-fluid text-center">
             <div class="row justify-content-center">
                 <div class="col d-flex justify-content-evenly">
@@ -136,6 +141,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        function changeColor(){
+            document.getElementById("room1").style.backgroundColor= "red";
+            document.getElementById("room2").style.backgroundColor= "green";
+            document.getElementById("room4").style.backgroundColor= "green";
+            document.getElementById("room3").style.backgroundColor= "red";
+            document.getElementById("room5").style.backgroundColor= "green";
+            document.getElementById("room6").style.backgroundColor= "red";
+            document.getElementById("room7").style.backgroundColor= "green";
+            document.getElementById("room8").style.backgroundColor= "red";
+            document.getElementById("room9").style.backgroundColor= "green";
+        }
+
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
