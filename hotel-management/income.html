@@ -14,149 +14,154 @@
 </head>
 
 <body>
-    
-    <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-sm bg-info navbar-dark d-flex justify-content-between">
-            <div class="d-flex align-items-center">
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark d-flex justify-content-between">
+        <div class="d-flex align-items-center">
 
-                <!-- Links -->
-                <ul class="navbar-nav" style="margin: auto;">
-                    <!-- Hoetl logo -->
-                    <a class="navbar-brand" href="#">
-                        <img src="../docs/images/logo.png" alt="logo" style="width:70px;">
-                    </a>
-                    <li class="nav-item active p-3 ">
-                        <a class="nav-link" href="C:\hotelsoftware\hotel-management\search-room.html" target="_self">New Reservation</a>
-                    </li>
-                    <li class="nav-item active p-3">
-                        <a class="nav-link" href="#">Hotel Reports</a>
-                    </li>
+            <!-- Links -->
+            <ul class="navbar-nav" style="margin: auto;">
+                <!-- Hoetl logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../docs/images/logo.png" alt="logo" style="width:70px;">
+                </a>
+                <li class="nav-item active p-3 ">
+                    <a class="nav-link" href="C:\hotelsoftware\hotel-management\search-room.html" target="_self">New
+                        Reservation</a>
+                </li>
+                <li class="nav-item active p-3">
+                    <a class="nav-link" href="#">Hotel Reports</a>
+                </li>
 
-                </ul>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#">Login/Logout</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <body>
+        <div class="card">
+            <div class="card-header text-center">
+                <strong>Income Statement / GELİR
+                    TABLOSU</strong>
             </div>
+            <div id="takvimkutusu" style="background-color: bisque;">
+                <div class="d-grid gap-2 col-6 mx-auto" [formGroup]="">
+                    <div class="col-md-12" style="margin-bottom: 25px; margin-top: 25px">
+                        <div class="form-row">
+                            <div class="col-md-5 mb-3">
+                                <label for="validationCustom1" style="margin-bottom: 10px; margin-top: 6px">
+                                    <h5>Start :</h5>
+                                </label>
+                                <input class="form-control" type="date" value="" (change)="calcTotalPrice()"
+                                    formControlName="" id="startDate" />
+                            </div>
+                            <div class="col-md-5 ">
+                                <label for="validationCustom2" style="margin-bottom: 10px; margin-top: 6px">
+                                    <h5>End :</h5>
+                                </label>
+                                <input formControlName="" (change)="calcTotalPrice()" class="form-control"
+                                    type="date" value="" id="endDate" />
 
-            <div>
-                <ul class="navbar-nav">
-                    <li class="nav-item active ">
-                        <a class="nav-link" href="#">Login/Logout</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-
-        <body>
-            <div class="card">
-                <div class="card-header text-center">
-                    <strong>Income Statement / GELİR
-                        TABLOSU</strong>
-                </div>
-                <div id="takvimkutusu" style="background-color: bisque;">
-                    <div class="d-grid gap-2 col-6 mx-auto" [formGroup]="">
-                        <div class="col-md-12" style="margin-bottom: 25px; margin-top: 25px">
-                            <div class="form-row">
-                                <div class="col-md-5 mb-3">
-                                    <label for="validationCustom1" style="margin-bottom: 10px; margin-top: 6px">
-                                        <h5>Start :</h5>
-                                    </label>
-                                    <input class="form-control" type="date" value="" (change)="calcTotalPrice()"
-                                        formControlName="" id="startDate" />
-                                </div>
-                                <div class="col-md-5 ">
-                                    <label for="validationCustom2" style="margin-bottom: 10px; margin-top: 6px">
-                                        <h5>End :</h5>
-                                    </label>
-                                    <input formControlName="" (change)="calcTotalPrice()" class="form-control"
-                                        type="date" value="" id="endDate" />
-
-                                </div>
-                                <div class="col-md-2" class="d-grid gap-2"
-                                    style="margin-bottom: 45px; margin-top: 49px">
-                                    <button class="btn btn-info" type="button">Search</button>
-
-                                </div>
+                            </div>
+                            <div class="col-md-2" class="d-grid gap-2"
+                                style="margin-bottom: 45px; margin-top: 49px">
+                                <button class="btn btn-info" type="button">Search</button>
 
                             </div>
 
-
                         </div>
+
 
                     </div>
-                    <div class="card text-center">
-                        <div class="card-header bg-transparent border-success"> <strong>Income Statement / GELİR
-                                TABLOSU</strong></div>
-                        <div class="card-body text-dark">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item text-left">
-                                    <h6 class="m-0">Günlük Gelir :</h6>
-                                </li>
-                            </ul>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item text-left">
-                                    <h6 class="m-0">Haftalık Gelir :</h6>
-                                </li>
-                            </ul>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item text-left">
-                                    <h6 class="m-0">Aylık Gelir :</h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-success"> <strong>Total Income / TOPLAM
-                                GELİR</strong>
 
-                        </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-header bg-transparent border-success"> <strong>Income Statement / GELİR
+                            TABLOSU</strong></div>
+                    <div class="card-body text-dark">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <h6>1234567 ₺ </h6>
+                            <li class="list-group-item text-left">
+                                <h6 class="m-0">Günlük Gelir :</h6>
                             </li>
                         </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-left">
+                                <h6 class="m-0">Haftalık Gelir :</h6>
+                            </li>
+                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-left">
+                                <h6 class="m-0">Aylık Gelir :</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-success"> <strong>Total Income / TOPLAM
+                            GELİR</strong>
 
                     </div>
-        </body>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h6>1234567 ₺ </h6>
+                        </li>
+                    </ul>
 
-
-        <!-- Footer -->
-        <footer class="bottom bg-info">
-
-            <div class="row pt-3 pb-3 d-flex justify-content-between">
-                <div class="col-4  text-center">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="auto" fill="currentColor"
-                            class="bi bi-facebook "  viewBox="0 0 16 16">
-                            <path
-                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                        </svg>
-                    </a>
-                    <a class="p-2" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="auto" fill="currentColor"
-                            class="bi bi-youtube"  viewBox="0 0 16 16">
-                            <path
-                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="col-4 p-0 text-center">
-                    <p class="text-light m-0">&copy; nisahulya</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-light m-0 text-center">Lorem ipsum sir amet</p>
-                </div>
+                </div>    
             </div>
+        </div>    
+    </body> 
+    
 
-        </footer>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+
+
+    <!-- Footer -->
+    <footer class="bottom bg-info">
+        <div class="row pt-3 pb-3 d-flex justify-content-between">
+            <div class="col-4  text-center">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="auto" fill="currentColor"
+                        class="bi bi-facebook " viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+                <a class="p-2" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="auto" fill="currentColor"
+                        class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="col-4 p-0 text-center">
+                <p class="text-light m-0">&copy; nisahulya</p>
+            </div>
+            <div class="col-4">
+                <p class="text-light m-0 text-center">Lorem ipsum sir amet</p>
+            </div>
+         </div>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
